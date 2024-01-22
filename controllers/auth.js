@@ -338,7 +338,7 @@ exports.signupEmailSand = async (req, res, next) =>{
           <td>
             <div style="padding: 0 1.5em; text-align: center;">
               <h3 style="font-family: 'Lato', sans-serif; color: black; font-size: 30px; margin-bottom: 0; font-weight: 400;">Hi ${UserEmail.fullName}!</h3>
-              <h4 style="font-family: 'Lato', sans-serif; font-size: 24px; font-weight: 300;">Welcome toCoinstarpro Bitminers, your Number 1 online trading platform.</h4>
+              <h4 style="font-family: 'Lato', sans-serif; font-size: 24px; font-weight: 300;">Welcome to Coinstarpro Bitminers, your Number 1 online trading platform.</h4>
               <span>
                 Your Trading account has been set up successfully 
               </span>
