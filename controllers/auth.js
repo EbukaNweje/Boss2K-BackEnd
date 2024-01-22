@@ -340,17 +340,13 @@ exports.signupEmailSand = async (req, res, next) =>{
               <h3 style="font-family: 'Lato', sans-serif; color: black; font-size: 30px; margin-bottom: 0; font-weight: 400;">Hi ${UserEmail.fullName}!</h3>
               <h4 style="font-family: 'Lato', sans-serif; font-size: 24px; font-weight: 300;">Welcome to Coinstarpro Bitminers, your Number 1 online trading platform.</h4>
               <span>
-                Your Trading account has been set up successfully 
-              </span>
-              <span>
-                 You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.
+                Great news! Your trading account setup is complete. <br> You can now fund your account to start trading immediately.  <br>Please make sure to deposit to the appropriate address on our platform using Bitcoin only.
               </span>
 
               <p>
-                For more enquiry kindly contact your account manager or write directly with our live chat support on our platform 
-               <br> or you can send a direct mail to us at <span style="color: blue">${process.env.USER}.</span></p>
+                For any inquiries, kindly reach out to your account manager or use the live chat support <br> on our platform. Alternatively, you can send an email to  <span style="color: blue">${process.env.USER}. <br> They'll be happy to assist you!
                <p>
-                Thank You for choosing our platform and we wish you a successful trading.
+               Thanks for choosing our platform! We're thrilled to have you on board. Wishing you successful trading ahead!
                </p>
             </div>
           </td>
