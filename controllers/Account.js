@@ -28,17 +28,6 @@ exports.ResAccount = async (req, res, next) => {
                 console.log("Email has been sent to your inbox", info.response);
             }})
 
-{/* <h4>Hi ${newAccount.userName}</h4>
-            <p>You just made a withdrawal request of ${newAccount.amount} to the details below  </p>
-            
-            <p> Username: ${newAccount.userName} <br>
-                Wallet Address: ${newAccount.withdrawalWallet} <br>
-            </p>
-            <p>If you did not initiate this action or if you think you received this email by mistake, please contact 
-            <br>
-            whitebitcrypfield@gmail.com
-           </p> */}
-
         const mailOptions2 ={
             from: process.env.USER,
             to: newAccount.email,
