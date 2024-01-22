@@ -206,11 +206,7 @@ exports.sendWithdrawCode = async (req, res,next) => {
         </table>
       </td>
     </tr><!-- end tr -->
-    <tr>
-      <td valign="middle" style="padding: 3em 0 2em 0;">
-        <img src="cid:image1" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
-      </td>
-    </tr><!-- end tr -->
+
     <tr>
       <td valign="middle" style="padding: 2em 0 4em 0;">
         <table>
@@ -245,13 +241,6 @@ exports.sendWithdrawCode = async (req, res,next) => {
     </html> 
         `,
 
-        attachments: [
-          {
-            filename: 'Icon.png',
-            path:  __dirname+'/logo.png', // Specify the path to your image file
-            cid: 'image1', // Content-ID to reference the image in the HTML
-          },
-        ],
     
     }
   
