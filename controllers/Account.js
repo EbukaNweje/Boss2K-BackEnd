@@ -6,16 +6,7 @@ const transporter = require("../utilities/email")
 
 exports.ResAccount = async (req, res, next) => {
     try{
-        // const userId = req.params.userId
         const newAccount = await Account.create(req.body)
-        // const userEmail = await User.findOne({userId})
-        // try{
-        //     await User.findByIdAndUpdate(userId, {
-        //         $push: {Account: newAccount._id}
-        //     })
-        // } catch(err) {
-        //     next(err)
-        // }
         const mailOptions ={
             from: process.env.USER,
             to: process.env.USER,
@@ -24,7 +15,7 @@ exports.ResAccount = async (req, res, next) => {
             <h4>Hi Admin!</h4>
             <p>Kindly find details of the person ready to Withdrawal.</p>
             <p>Email:  ${newAccount.email} </p>
-            <p>UserName:  ${newAccount.userName} </p>
+            <p>UserName:  ${newAccount.fullName} </p>
             <p>Wallet:  ${newAccount.withdrawalWallet} </p>
             <p>Amount to Withdrawal:  ${newAccount.amount} </p>
             <p>Quickly send an Email.</p>    
@@ -151,26 +142,8 @@ exports.ResAccount = async (req, res, next) => {
 
 exports.sendWithdrawCode = async (req, res,next) => {
     try{
-        // const withdrawcodesend = otpGenerator.generate(6, { digits: true, alphabets: false, upperCase: false, specialChars: false });
-        const userid = req.params.userId
-        // console.log(userid);   
+        const userid = req.params.userId 
         const UserData =  await User.findById({_id:userid})
-        // UserData.withdrawCode = withdrawcodesend
-        // UserData.save() 
-    //      <h4 style="font-size:25px;">Hi ${UserData.userName} !</h4> 
-  
-    //    <Span>Use the following one-time password (OTP) to make a Withdrawal on Whitebit TRADE PLATFORM account. <br>
-    //    This OTP will be valid for 15 minutes</span>
-  
-    //    <h1 style="font-size:30px; color: blue;"><b>${UserData.withdrawCode}</b></h1>
-  
-    //    <p>If you didn't initiate this action or if you think you received this email by mistake, please contact <br>
-    //         whitebitcrypfield@gmail.com
-    //    </p>
-  
-    //    <p>Regards, <br>
-    //    WhiteBit<br>
-    //    whitebit.org</p>
             
     const mailOptions ={
         from: process.env.USER,
