@@ -1,5 +1,5 @@
 {
-    "name": "the-bitpay-capital-back-end",
+    "name": "boss2-k-dash-board",
     "builds": [
       {
         "src": "server.js",

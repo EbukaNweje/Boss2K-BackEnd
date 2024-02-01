@@ -113,6 +113,13 @@ totalWithdrawal: {
     default: false,
   },
 
+  Deposit:[
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Deposit"
+    }
+  ],
+
 }, {timestamps: true});
 
 module.exports = User = mongoose.model('User', UserSchema )
