@@ -474,12 +474,9 @@ exports.signupEmailSand = async (req, res, next) =>{
     const UserEmail = await User.findOne({email})
     const mailOptions ={
       from: process.env.USER,
-      to: UserEmail.email,
+      to: email,
       subject: "Successful Sign Up!",
     html: `
-    
-
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
