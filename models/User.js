@@ -53,27 +53,27 @@ const UserSchema = new mongoose.Schema({
   },
 
   accountBalance: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
   totalInvestment: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
   totalProfit: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
   bonus: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
   tradingAccounts: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
@@ -82,14 +82,13 @@ const UserSchema = new mongoose.Schema({
     default: 0.00
   },
 
-  
 totalDeposit: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
 totalWithdrawal: {
-    type: String,
+    type: Number,
     default: 0.00
   },
 
@@ -104,21 +103,39 @@ totalWithdrawal: {
 
   verify: {
     type: Boolean,
-    default: true,
-  },
-
-  isAdmin: {
-    // Role of user it will be (normal or admin )
-    type: Boolean,
     default: false,
   },
 
-  Deposit:[
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Deposit"
-    }
-  ],
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  admin:{
+     type: mongoose.SchemaTypes.ObjectId,
+     ref: "admin"
+  },
+  investmentPlan:[{
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "userplan",
+  }],
+  Transactions: {
+    deposits: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'deposit'
+    }],
+    withdrawals: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'withdraw'
+    }],
+    investments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Invest'
+    }],
+    interests: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Interest'
+    }],
+},
 
 }, {timestamps: true});
 
