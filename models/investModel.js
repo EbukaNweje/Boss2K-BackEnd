@@ -21,14 +21,6 @@ const InvestSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    status: {
-        type: String,
-        enum: ["active", "completed"]
-    },
-    returns: {
-        type: Number,
-        required: true
-    },
     Date:{
         type:String,
         default:createdOn
