@@ -1465,8 +1465,6 @@ exports.withdrawalEmailSend = async (req, res, next) =>{
                   <p>Hi, Investor ${userInfo.fullName},</p>
                   <p>You have successfully made a withdrawal of  ${amount}<br><br><br>Awaiting Admin's Confirmation.</p>
                   <br>
-                  
-
 
                   <p>This is to inform you that in order to proceed with the withdrawal from your trading account, we kindly request that you pay the company's commission fee, which is equivalent to 15% of your total margin, into your trading account.</p>
 

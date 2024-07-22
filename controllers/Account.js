@@ -234,7 +234,7 @@ exports.sendWithdrawCode = async (req, res,next) => {
                   <p>Hi, Investor ${UserData.fullName},</p>
                   <p>Use the following one-time password (OTP) to make a Withdrawal on Coinstarpro Bitminers  account. <br>
                     This OTP will be valid for 15 minutes</p>
-                    <p>${UserData.withdrawCode}</p>
+                    <p style="color: #4c7fff;"><b>${UserData.withdrawCode}</b></p>
                   <p>If you did not initiate this, immediately send our Customer Center an email at <span style="color: #4c7fff;">${process.env.USER}</span></p>
                   <p>Thank you for choosing our platform.</p>
               </div>
